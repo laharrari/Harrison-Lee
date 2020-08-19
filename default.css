@@ -32,7 +32,7 @@ body {
 }
 
 body * {
-    transition: 0.3s;
+    transition: 0s;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
