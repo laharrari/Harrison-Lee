@@ -34,13 +34,65 @@
                     <div class="about-one">
                         <h4>MapleStory Private Server</h4>
                         <p>
-                            Place Holder.
+                            MapleStory was and still is a popular MMORPG my friends and I grew up playing. I was able to get the source code of an older
+                            iteration of the game which can be found <a target="_blank" href="https://github.com/ronancpl/HeavenMS">here</a>. The code base
+                            was mostly in Java and JavaScript. It required using NetBeans to build a JAR file which could be exected to launch the server.
+                            There was also a client included for users in order to launch the playable game. Interestingly, the server IP was hardcoded in
+                            the client which meant in order to update the server IP for players it required using a Hex Editor and changing 3 very specific
+                            lines to the new IP.
                         </p>
-                    </div>
-
-                    <div class="social-links">
-                        <img id="post1_img1" src="./images/light_social.png">
-                        <p>Place Holder.</p>
+                        <br>
+                        <p>
+                            One of the scripts I developed was a shop for players to buy whatever items they may need. I picked an existing non-player
+                            character (NPC) that could be used as a shop keeper and created a database holding all the items they were going to sell. I used
+                            WampServer to connect to the database and MySQL Query Browser to make changes. Looking back on it now, the JavaScript file that
+                            the NPC used is quite redundant. I feel I could have used some arithmetic and looping to cut down on the lines of code. During
+                            the development of this NPC I was getting quite frustrated with some communication errors between the server and database that I
+                            just got lazy and copy pasted code. I definitely could clean the code up and the link to the repo can be found
+                            <a target="_blank" href="https://github.com/laharrari/MapleStory-Private-Server">here</a>.
+                        </p>
+                        <br>
+                        <p>
+                            The game was hosted on AWS Lightsail. I created a Windows Lightsail instance because the project had a MySQL Query
+                            Browser and WampServer dependency which forced me into using a Windows operating system over a Linux/Unix. A Linux/Unix instance
+                            in the long run would have been cheaper as well as easier to use with FTP. I also investigated Azure solutions since I was going
+                            to use Windows, but I felt AWS was a better choice mainly due the cost and AWS's reputation for being very reliable. I feel
+                            if I did do this project again I would use Azure just to experience it myself.
+                        </p>
+                        <br>
+                        <p>
+                            I was unaware that FTP Server/Services did not come preconfigured on Windows instances. This required many hours of debugging
+                            and researching to finally install and setup FTP Server/Services on the Windows instance. Perhaps becuase Lightsail is new-ish?
+                            it was difficult to find resources that were specific to Lightsail. Often times I was pointed towards an EC2 solution or a solution
+                            I've already investigated, because of this I was sure to document my solution which I will provide below.
+                        </p>
+                        <br>
+                        <div id="skills">
+                            <ul>
+                                <p>
+                                I've found a solution to my problem. It turns out by default on Windows 2016/2012 instances of AWS Lightsail, FTP<br>
+                                Server/Service does not come installed by default. I had to install FTP Server/Service using the Windows Server<br>
+                                Manager. Although I only have FTP working at the moment, I plan on figuring out how to SFTP using my AWS SSH key<br>
+                                (If that is how it's supposed to work). At the moment without SFTP, I am connecting with FileZilla using my default<br>
+                                user name, password, public ip, and port 21.<br>
+                                <br>
+                                An excellent <a target="_blank" href="https://www.youtube.com/watch?v=ENpkZTfTlWw">video</a> reference I used for installing
+                                and configuring my FTP Server.<br>
+                                <br>
+                                Also after installing FTP Server, do not forget to add a Firewall rule on the Networking tab of your Lightsail instance for<br>
+                                Port 21 (TCP).
+                                </p>
+                            </ul>
+                        </div>
+                        <br>
+                        <p>
+                            Another challenge I faced with this project was because I was making changes to code on my machine and hosting the server on AWS Lightsail.
+                            Whenever I had to apply those changes to the server I would have to connect to FileZilla, transfer the relevant files, and reboot the server.
+                            This process was really tedious and I wish I could have figured out a better work flow for the project. After using Heroku on some of my more
+                            recent projects, I feel there could have been a way I could have monitored changes to a Git repo then automatically built and deployed to my
+                            server on Lightsail. This is something I will be considering moving forward and need to investigate. I definitely need to be automating my work
+                            when I can.
+                        </p>
                     </div>
                 </div>
             </div>
