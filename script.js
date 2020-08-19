@@ -18,12 +18,12 @@ for (var i = 0; i < themeDots.length; i++) {
 function setTheme(mode) {
     if (mode === "light") {
         document.getElementById("theme-style").href = "default.css";
-        document.getElementById("social_img").src = "images/light_social.png"
+        document.getElementById("social_img").src = "./images/light_social.png"
     }
 
     if (mode === "dark") {
         document.getElementById("theme-style").href = "dark.css";
-        document.getElementById("social_img").src = "images/dark_social.jpg"
+        document.getElementById("social_img").src = "./images/dark_social.jpg"
     }
 
     localStorage.setItem("theme", mode);
