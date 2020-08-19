@@ -339,13 +339,11 @@ h6 { font-size: 16px;}
     border: none;
 }
 
-#post1_img1 {
-    display: block;
-    margin: 0 auto;
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border: 2px solid var(--borderColor);
+#highlight {
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 35px;
+    background-color: var(--previewShadow);
 }
 
 @media screen and (max-width: 1200px) {
