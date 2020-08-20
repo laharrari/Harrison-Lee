@@ -8,7 +8,7 @@
     --maintext: black;
     --secondaryText: #4b5156;
 
-    --themeDotBorder: #24292e;
+    --themeDotBorder: #17a2b8;
 
     --previewBg: rgb(251, 249, 243, 0.8);
     --previewShadow: #add8e6;
@@ -180,7 +180,7 @@ h6 { font-size: 16px;}
     background-color: black;
     border-radius: 50%;
 
-    margin: 5px;
+    margin: 10px;
     border: 2px solid var(--themeDotBorder);
 
     -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
@@ -190,16 +190,17 @@ h6 { font-size: 16px;}
     cursor: pointer;
 }
 
-/* .theme-dot:hover {
-    border-width: 5px;
-} */
+.theme-dot:hover {
+    border-width: 4px;
+    margin: 8px;
+}
 
 #light-mode {
     background-color: #fff;
 }
 
 #dark-mode {
-    background-color: #2e2e2e;
+    background-color: black;
 }
 
 #settings-note {
