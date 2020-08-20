@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DioCraft</title>
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="default.css">
+
+        <link id="theme-style" rel="stylesheet" type="text/css" href="">
+    </head>
+    <body>
+        <div class="nav-wrapper">
+            <div class="dots-wrapper">
+                <div id="dot1" class="browser-dot"></div>
+                <div id="dot2" class="browser-dot"></div>
+                <div id="dot3" class="browser-dot"></div>
+            </div>
+
+            <ul id="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <!-- <li><a href="index.html#contact">Contact</a></li> -->
+            </ul>
+        </div>
+        
+        <section class="s1">
+            <div class="main-container">
+                <div class="about-wrapper">
+                    <div class="about-post">
+                        <h4>DioCraft</h4>
+                        <h6>July 2020 - Present</h6>
+                        <a target="_blank" href="https://github.com/laharrari/DioCraft">GitHub Repository</a>
+                        <br>
+                        <p>
+                            This project is a Discord bot I am currently developing for Minecraft server management through Discord. The bot is made in Python
+                            using Discord.py to read and send messages through Discord chat. Essentially, the bot will monitor a specific text channel for when
+                            commands are given to it using a special command character which is denoted as "/". When a command is given it will use MCRcon which
+                            is a Python library for handling Minecraft Remote Commands (RCON) to execute the correct Minecraft RCON corresponding with the Discord
+                            command that was given. The list of commands will be provided below.
+                        </p>
+                        <br>
+                        <div id="highlight">
+                            <ul>
+                                <p>
+                                    /online - Display list of all players that are online on the Minecraft server to the Discord chat.<br>
+                                    /wl - Display list of all players that are whitelisted on the server.<br>
+                                    /awl (name) - To add someone to the server whitelist.<br>
+                                    /dwl (name) - To remove someone from the server whitelist.<br>
+                                    /login - For administrators to manually connect the bot to the Minecraft server via MCRcon. This was mostly for debugging.<br>
+                                </p>
+                            </ul>
+                        </div>
+                        <br>
+                        <p>
+                            Currently the bot is only being used for one server and is able to connect to the Minecraft server using the server ip, server port,
+                            and server password. Since this project is on GitHub I do not want to be uploading sensitive information. Therefore I use a .env and a
+                            .gitignore to keep the credentials locally, while the usable code is pushed onto the repo. This means someone can take the code and fill
+                            in the server ip, port, and password fields to use on their own server. Furthermore, the bot itself is being hosted on Heroku.
+                        </p>
+                        <br>
+                        <p>
+                            Relevant Links
+                            <br>
+                            <a target="_blank" href="https://discordpy.readthedocs.io/en/latest/">Discord.py</a>
+                            <br>
+                            <a target="_blank" href="https://github.com/uncaught-exceptions/mcrcon">MCRcon Python Library</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script type="text/javascript" src="script.js"></script>
+        
+    </body>
+</html>
