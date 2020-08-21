@@ -219,14 +219,14 @@ h6 { font-size: 16px;}
 #preview-shadow {
     background-color: var(--previewShadow);
     width: 400px;
-    height: 200px;
+    height: 225px;
     padding-left: 30px;
     padding-top: 30px;
 }
 
 #preview {
     width: 400px;
-    height: 200px;
+    height: 225px;
     border: 1.5px solid var(--secondaryBorderColor);
     background-color: var(--previewBg);
     padding: 15px;
