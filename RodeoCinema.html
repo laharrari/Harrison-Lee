@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rodeo Cinema</title>
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="default.css">
+
+        <link id="theme-style" rel="stylesheet" type="text/css" href="">
+    </head>
+    <body>
+        <div class="nav-wrapper">
+            <div class="dots-wrapper">
+                <div id="dot1" class="browser-dot"></div>
+                <div id="dot2" class="browser-dot"></div>
+                <div id="dot3" class="browser-dot"></div>
+            </div>
+
+            <ul id="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <!-- <li><a href="index.html#contact">Contact</a></li> -->
+            </ul>
+        </div>
+        
+        <section class="s1">
+            <div class="main-container">
+                <div class="about-wrapper">
+                    <div class="about-post">
+                        <h4>Rodeo Cinema</h4>
+                        <h6>November 2020 - Present</h6>
+                        <a target="_blank" href=https://github.com/laharrari/rodeo-cinema>GitHub Repository</a>
+                        <br>
+                        <p>
+                            This project started becuase my friends and I enjoyed watching YouTube videos together and wanted a convenient way we could watch in sync.
+                            There is also a real-time chat that allows users in the same "theater" to chat with each other. A theater is essentially a custom video
+                            viewing room for users to join. I developed the front end in React with Tailwind CSS to style the components. The backend uses
+                            Express.js and Socket.io to create theaters.
+                        </p>
+                        <br>
+                        <p>
+                            A high level description would be a username and theater room name which is essentially is a code is given by the user. This takes the user
+                            to a new page where the url includes the username and theater name. Those two details are parsed using query selector and when a connection
+                            is made, it is emitted to socket where it creates a new user object. When the user makes actions such as sending chat messages, socket emits
+                            the message that was sent and the relevant client side components catch the changes to update the view for all the users that are in the same
+                            room.
+                        </p>
+                        <br>
+                        <p>
+                            Some features are:
+                            <ul>
+                                <li>
+                                    - Users can create "Theaters" with custom names so users can have their private viewings for their party.
+                                </li>
+                                <li>
+                                    - There is a functional real-time chat, still needs styling but emojis work.
+                                </li>
+                                <li>
+                                    - YouTube player is working, but not synchronized for all users in a Theater.
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script type="text/javascript" src="script.js"></script>
+        
+    </body>
+</html>
